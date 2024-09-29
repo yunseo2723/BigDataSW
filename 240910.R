@@ -1,4 +1,4 @@
-#실습
+#실습1
 #1-1
 abc <- function(r) { x <- 0.1^r * 0.9^(10-r)}
 result <- 0
@@ -20,7 +20,6 @@ url1 <- "https://vincentarelbundock.github.io/Rdatasets/csv/AER/CASchools.csv"
 MYURL1 <- read.csv(url1, nrows = 10)
 str(MYURL1)
 head(MYURL1)
-
 
 
 
