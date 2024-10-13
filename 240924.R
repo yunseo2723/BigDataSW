@@ -20,7 +20,7 @@ hist(height, breaks = c(150,160,170,180,190), col="red", border="black", main= "
 #p16 줄기-잎 그림
 stem(height, scale = 1)
 
-#p17 두 변수 요약약
+#p17 두 변수 요약
 MYDATA <- read.csv(file = "c:/rData/crosstab.csv", header = T)
 MYDATA
 table(MYDATA$School, MYDATA$Grade)
