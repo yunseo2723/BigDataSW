@@ -1,14 +1,15 @@
+
 mtcars
 
 #1
-hist(mtcars$cyl, breaks = c(4,5,6,7,8), col="red", border="black", main= "Histogram Example")
+hist(mtcars$cyl)
 
 #2
 table(mtcars$cyl, mtcars$gear)
 
 #3
-table1 <- table(mtcars$cyl, mtcars$gear)
-barplot(table1, legend.text=T, col=c("red","yellow","black"))
+barplot(mtcars$cyl)
+barplot(mtcars$gear)
 
 #4
 plot(mtcars$cyl, mtcars$gear, type="p")
@@ -25,9 +26,9 @@ var(mtcars$mpg)
 sd(mtcars$mpg)
 
 #7
+library(moments)
 skewness(mtcars$mpg)
-a <- scale(mtcars$mpg, center = T)
-hist(a, breaks = 10, col="red", border="black", main= "Histogram Example")
+hist(mtcars$mpg, breaks = 3)
 
 #8
 #체비세프 정리: 1보다 큰 z-값에 대해 평균과 z표준편차 사이에 있을 데이터의 비율은 적어도 (1- 1/z2)이다.
@@ -48,3 +49,18 @@ sd(mtcars$mpg)   #6.02
 range(mtcars$mpg)
 IQR(mtcars$mpg)*1.5
 boxplot(mtcars$mpg)
+
+#11
+fivenum(mtcars$mpg)
+
+#12
+boxplot(mtcars$mpg)
+
+#13
+#분포 모양은 전체적인 연비의 흐름을 보고 싶을 때
+#박스플롯은 연비의 요약 통계와 이상치를 빠르게 확인하고 싶을 때
+
+#14
+cov(mtcars$mpg, mtcars$disp, method = "pearson")
+cor(mtcars$mpg, mtcars$disp)
+

@@ -1,28 +1,3 @@
-#실습1
-#1-1
-abc <- function(r) { x <- 0.1^r * 0.9^(10-r)}
-result <- 0
-for(r in 0:10) { result <- result + abc(r)}
-print (result)
-
-#1-2
-abc2 <- function(r) { x <- 1/(2^r)+1/(3^r)}
-result <- 0
-for(r in 1:5) { result <- result + abc2(r)}
-print (result)
-
-#2
-data <- read.table("c:/rData/data.txt", header =T)
-data
-
-#3
-url1 <- "https://vincentarelbundock.github.io/Rdatasets/csv/AER/CASchools.csv"
-MYURL1 <- read.csv(url1, nrows = 10)
-str(MYURL1)
-head(MYURL1)
-
-
-
 #예제연습
 
 test <- read.table("c:/rData/test.txt", header = T)
